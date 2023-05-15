@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <style>
+        body {
+            background : green;
+        }
+        #start, #finish {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 1024px;
+            height: 576px;
+            color: #f7f7f7;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+        }
+        #start a, #finish a {
+            padding: 100px;
+            text-align: center;
+            display: block;
+        }
+
+
+    </style>
+<body>
+
+<canvas id= "myCanvas" style="display:none"></canvas>
+
+<!-- 
+    Diğer js dosyalarını bir tek html dökümanında birleştiriyor ve oyunu tek bir sayfadan oynayabiliyoruz.
+--> 
+
+<script src="eventListener.js"></script>
+<script src="CollisionBlock.js"></script>
+<script src="Player.js"></script>
+<script src="Sprite.js"></script>
+<script src="index.js"></script>
+
+
+<div id="start" style="display:block">
+    <a href="#" onclick="start()"> Oyunu Başlat! </a><br>
+            <h2>Kontroller</h2>
+            <p>Mavi Karakter İçin: WASD </p>
+            <p>Kırmızı Karakter İçin: Yön Tuşları</p><br>
+
+            <p>Altın bloklarda durarak tahta bloklardaki kırmızı karakteri uçurabilir ve</p> 
+            <p>böylece hayatını kurtarabilirsiniz. Çünkü o iri biri ve kaçmakta zorlanıyor.</p>
+            <p>Siz ise mavi karakter olarak ufak ve atiksiniz.</p>
+            <p>Daha yükseğe zıplayabiliyorsunuz ve daha hızlısınız.</p>
+            <p>Amacınız birlikte portala girip buradan kaçmak.</p>
+</div>
+
+<div id="finish" style="display:none">
+    <h2>Tebrikler!</h2>
+    <a href="index.html" onclick="finish()"> Tekrar Oyna! </a>
+</div>
+
+<script>
+    function start(){
+        let divStart = document.getElementById("start");
+        let divFinish = document.getElementById("finish");
+        let MYCanvas = document.getElementById("myCanvas");
+        divStart.style.display = "none";
+        MYCanvas.style.display = "block";
+        divFinish.style.display = "none";
+    }
+
+    function finish(){
+        let divStart = document.getElementById("start");
+        let divFinish = document.getElementById("finish");
+        let MYCanvas = document.getElementById("myCanvas");
+        divStart.style.display = "none";
+        MYCanvas.style.display = "none";
+        divFinish.style.display = "block";
+    }
+
+</script>
+
+</body>
+</html>
