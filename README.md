@@ -10,7 +10,7 @@ Aynı zamanda bu oyunu [platformergame.freeoda.com](http://platformergame.freeod
 
 Oyunda 2 karakterimiz var ve bunlardan biri WASD diğeri ise yön tuşları ile kontrol ediliyor. 
 
-Karakterlerimizin haritada bir bloğun üstünde kalmalarını sağlamak için Tiled isimli harita yapımı uygulamasından dışa aktardığım her 16x16'lık bloğun karakterlerle collision (çarpışma) oluşturup oluşturmadığını belirten veri kullanıldı. Bu blokların konumları ile karakterlerine konumları X ve Y ekseni üzerinde her kare geçişinde kontrol ediliyor.
+Karakterlerimizin haritada bir bloğun üstünde kalmalarını sağlamak için Tiled isimli harita yapımı uygulamasından dışa aktardığım her 16x16'lık bloğun karakterlerle collision (çarpışma) oluşturup oluşturmadığını belirten veri kullanıldı. Bu blokların konumları ile karakterlerin konumları X ve Y ekseni üzerinde her kare geçişinde kontrol ediliyor.
 
 Aşağıdaki gifte Tiled isimli harita üretme uygulaması kullanılarak oluşturulan kırmızı bloklar collision oluşturan bloklardır ve karakterlerimiz bu blokların içerisinden geçemezler. Dışa aktarılan veri ise kırmızı blokların 1 diğer blokların 0 olduğu bir boolean dizisine benzetilebilir.
 
